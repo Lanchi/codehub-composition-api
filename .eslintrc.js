@@ -11,7 +11,33 @@ module.exports = {
     parser: 'babel-eslint',
   },
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'import/extensions': ['error', 'always', {
+      js: 'never',
+      vue: 'never',
+    }],
+    'import/prefer-default-export': 'off',
+    'max-len': [
+      'error',
+      {
+        code: 140,
+        ignoreStrings: true,
+      },
+    ],
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    // Vue-specific rules
+    'vue/html-closing-bracket-newline': ['error', {
+      singleline: 'never',
+      multiline: 'never',
+    }],
+    'vue/max-attributes-per-line': ['error', {
+      singleline: 1,
+      multiline: {
+        max: 1,
+        allowFirstLine: true,
+      },
+    }],
+    'vue/no-unused-components': 'off',
+    'vue/require-default-prop': 'off',
   },
 };
