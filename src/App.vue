@@ -7,7 +7,8 @@
 
     <v-content>
       <!-- <RicketyList /> -->
-      <RicketyListComposition />
+      <!-- <RicketyListComposition /> -->
+      <router-view />
     </v-content>
   </v-app>
 </template>
@@ -18,14 +19,9 @@ import RicketyListComposition from '@/components/RicketyListComposition';
 
 export default {
   name: 'App',
-
   components: {
     RicketyList,
     RicketyListComposition,
   },
-
-  data: () => ({
-    //
-  }),
 };
 </script>
