@@ -7,8 +7,8 @@
 
     <v-content>
       <!-- <RicketyList /> -->
-      <!-- <RicketyListComposition /> -->
-      <router-view />
+      <RicketyListComposition />
+      <!-- <router-view /> -->
     </v-content>
   </v-app>
 </template>

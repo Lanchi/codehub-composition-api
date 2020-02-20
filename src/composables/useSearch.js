@@ -12,7 +12,6 @@ export default function useSearch(getItems) {
     });
   };
 
-  // eslint-disable-next-line
   onMounted(() => {
     runSearch();
   });

@@ -8,7 +8,9 @@ export default function useSorting({ input }) {
 
   const selectedSortingOption = ref('name');
 
-  const sortingOutput = computed(() => sortBy(sortState.input, [selectedSortingOption.value]));
+  const sortingOutput = computed(
+    () => sortBy(sortState.input, [selectedSortingOption.value]),
+  );
 
   return { sortState, sortingOutput, selectedSortingOption };
 }

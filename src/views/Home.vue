@@ -15,7 +15,7 @@ export default {
     const logo = ref(null);
 
     onMounted(() => {
-      console.log(logo.value);
+      // console.log(logo.value);
     });
 
     return { logo };

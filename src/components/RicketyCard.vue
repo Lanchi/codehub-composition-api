@@ -42,6 +42,8 @@
 </template>
 
 <script>
+import { ref } from '@vue/composition-api';
+
 const sounds = {
   1: 'https://sound.peal.io/ps/audios/000/000/537/original/woo_vu_luvub_dub_dub.wav?1469744420',
   2: 'https://sound.peal.io/ps/audios/000/000/559/original/my_name_is_morty_smith.wav?1469744389',
@@ -62,6 +64,18 @@ export default {
     item: {
       type: Object,
     },
+  },
+  setup() {
+    const audio = ref(null);
+
+    const play = () => {
+      audio.value.play();
+      setTimeout(() => {
+        if (audio.value) audio.value.pause();
+      }, 4000);
+    };
+
+    return { audio, play };
   },
   data() {
     return {};
